@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+bool istemp(int n){
+    int temp,rev=0,digit;
+    temp=n;
+    while(n>0){
+        digit=n%10;
+        rev=rev*10+digit;
+        n=n/10;
+    }
+    return (temp==rev);
+}
+int main() {
+    int n;
+    cin>>n;
+    
+    if(istemp(n)) cout<<"Palindrome Number\n";
+    else cout<<"Not Palindrome Number\n";
+    
+    return 0;
+}
