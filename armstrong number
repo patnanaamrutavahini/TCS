@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int n,temp,rem,sum=0,digits=0;
+
+    cin>>n;
+    temp=n;
+    while(temp>0){
+        digits++;
+        temp/=10;
+    }
+    temp=n;
+    while(temp>0){
+        rem=temp%10;
+        sum+=pow(rem,digits);
+        temp/=10;
+    }
+    if(sum==n) cout<<"armstrong number";
+    else cout<<"not armstrong number";
+    return 0;
+}
