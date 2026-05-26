@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int a,b,gcd,lcm;
+    cin>>a>>b;
+    int x=a,y=b;
+    while(y!=0){
+        int temp=y;
+        y=x%y;
+        x=temp;
+    }
+    gcd=x;
+    lcm=(a*b)/gcd;
+    
+    cout<<"GCD:"<<gcd<<endl;
+    cout<<"LCM:"<<lcm<<endl;
+    
+    return 0;
+}
